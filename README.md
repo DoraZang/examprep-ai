@@ -49,6 +49,8 @@ ANTHROPIC_API_KEY=your_key_here
 ```
 
 ## Project Structure
+
+```
 exam-prep-ai/
 ├── app.py              # Main Streamlit application
 ├── utils/
@@ -56,4 +58,5 @@ exam-prep-ai/
 │   └── api_client.py   # Claude API integration and prompt engineering
 ├── .env                # API key (not committed)
 └── README.md
+```
 
