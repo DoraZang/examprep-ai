@@ -1,5 +1,5 @@
 # Exam Prep AI
-
+**Live Demo:** https://examprep-ai-s3hpurmnuvxf4k7cq7eug4.streamlit.app/
 An intelligent exam preparation tool that transforms course materials into personalized practice questions using context engineering and iterative feedback loops.
 
 ## Motivation
