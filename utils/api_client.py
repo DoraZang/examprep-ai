@@ -39,59 +39,6 @@ Format your response clearly with headers for each topic. For all mathematical e
     return message.content[0].text
 
 
-# def generate_exam_questions(text_chunks, topics, user_preferences):
-#     """
-#     Generate exam-style questions based on course material and user preferences.
-#     text_chunks: list of text chunks from the uploaded PDF
-#     topics: extracted key topics from extract_key_topics()
-#     user_preferences: dict containing question_type, difficulty, num_questions, focus_areas
-#     Returns: generated questions as a string
-#     """
-#     combined_text = "\n\n".join(text_chunks[:3])
-
-#     question_type = user_preferences.get("question_type", "mixed")
-#     difficulty = user_preferences.get("difficulty", "medium")
-#     num_questions = user_preferences.get("num_questions", 5)
-#     focus_areas = user_preferences.get("focus_areas", "all topics")
-#     feedback = user_preferences.get("feedback", "")
-
-#     feedback_context = ""
-#     if feedback:
-#         feedback_context = f"\n\nPrevious feedback to incorporate: {feedback}"
-
-#     message = client.messages.create(
-#         model="claude-haiku-4-5-20251001",
-#         max_tokens=2000,
-#         messages=[
-#             {
-#                 "role": "user",
-#                 "content": f"""You are an expert professor creating exam questions. Generate exam questions based on the following course material and requirements.
-
-# Course Material:
-# {combined_text}
-
-# Key Topics Identified:
-# {topics}
-
-# Requirements:
-# - Number of questions: {num_questions}
-# - Question type: {question_type} (options: multiple choice, short answer, long answer, mixed)
-# - Difficulty level: {difficulty} (options: easy, medium, hard)
-# - Focus areas: {focus_areas}{feedback_context}
-
-# Please generate exactly {num_questions} questions. For each question:
-# 1. Write the question clearly
-# 2. If multiple choice, provide 4 options (A, B, C, D)
-# 3. Provide the correct answer
-# 4. Briefly explain why it is correct
-
-# Match the difficulty and style to a real university exam."""
-#             }
-#         ]
-#     )
-
-#     return message.content[0].text
-
 def generate_exam_questions(text_chunks, topics, user_preferences):
     """
     Generate exam-style questions based on course material and user preferences.
